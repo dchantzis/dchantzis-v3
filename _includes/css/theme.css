@@ -565,6 +565,14 @@ footer .copyright {
     text-align: center;
   }
 
+  .intro-splash {
+    top: 5rem;
+  }
+  .intro-splash .forty-margin {
+    width: 100%;
+    padding: 0;
+  }
+
 }
 
 @media only screen and (min-width: 60em) {
@@ -619,6 +627,14 @@ footer .copyright {
   }
   .fortyfive-margin {
     width: 45rem;
+  }
+
+  .intro-splash {
+    top: 5rem;
+  }
+  .intro-splash .forty-margin {
+    width: 100%;
+    padding: 0;
   }
 
 }
