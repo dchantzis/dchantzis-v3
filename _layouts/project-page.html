@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+{% assign project = site.projects | where:"slug",page.projectSlug %}
+{% assign project = project[0] %}
+
+<main class="main-page push-0 project-info">
+
+  <section class="page-content island brand-color {% if page.sectionClass %}{{page.sectionClass}}{% endif %}">
+
+  <h1 class="page-title brand">
+    <span class="background-white island-1-2">[{{project.tags[0]}}] {{project.label}}</span>
+  </h1>
+
+<div class="project-item-content island gutter-2 fortyfive-margin">
+
+  {% if project.embeded-content.size >= 1 %}
+    {% for video in project.embeded-content %}
+    <div class="push-1-2">
+      <div class="embed embed--16by9">
+      {{video}}
+      </div>
+    </div>
+    {% endfor %}
+  {% endif %}
+
+  {% for image in project.images %}
+  <a href="{{site.baseurl}}/files/{{project.projectSlug}}/{{image.src}}" target="_blank" rel="external">
+    <figure class="project-image">
+      <div class="embed embed-iso216">
+        <img class="embed-item img-flex" src="{{site.baseurl}}/files/{{project.projectSlug}}/{{image.src}}" alt="{{image.label}}"/>
+      </div>
+      <figcaption class="island-1-4 micro">{{image.label}}</figcaption>
+    </figure>
+  </a>
+  {% endfor %}
+
+  <div class="page-info background-white island-1-2">
+    <h6 class="year push-1-4">{{project.year}}</h6>
+
+    <div class="project-description p-container push-1-2 micro">
+      {{ content | markdownify }}
+    </div>
+
+    {% if project.tools.size >= 1 %}
+    <div class="project-tools micro push-0">
+      <span>Technologies used:</span>
+      <ul class="list-group-inline push-0">
+        {% for tool in project.tools %}
+          <li>{{ tool }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+
+  {% if project.links.size >=1 %}
+  <div class="page-links push-0 island-1-2">
+    <ul class="list-group-inline">
+      {% for link in project.links %}
+        <li><div class="button brand"><a class="" href="{{link.href}}" target="_blank"><span>{{link.label}}</span></a></div></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+</div>
+  </section>
+
+</main>

@@ -1,0 +1,9 @@
+markdown: kramdown
+baseurl: /responsive/dimitrioschanzis.com-v3-r
+url:
+exclude: ['README.md', '.gitingore']
+permalink: pretty
+collections:
+  projects:
+    output: true
+    permalink: /work/:path/

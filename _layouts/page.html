@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<main class="main-page push-2 {% if page.sectionClass %}{{page.sectionClass}}{% endif %}">
+
+  <section class="page-content island">
+
+    {% if '/' != page.url %}
+    <h1 class="brand page-title">
+      <span class="background-white island-1-2">{{ page.title | capitalize }}</span>
+    </h1>
+    {% endif %}
+    <div class="page-info p-container milli {% if '/' != page.url %}background-white{% endif %}">
+      <div class="island gutter-2 forty-margin">
+      {{ content }}
+      </div>
+    </div>
+
+  </section>
+
+</main>

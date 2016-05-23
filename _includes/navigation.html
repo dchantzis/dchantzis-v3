@@ -1,0 +1,27 @@
+{% if include.navClass == "nav-top" %}
+  <nav class="nav {{include.navClass}} text-center text-upper">
+    <ul class="list-group grid grid-middle navi">
+      <li class="list-group__item unit unit-xs-1 unit-s-1 unit-m-1-5 unit-push-m-2-5 unit-xs-island-1-2">
+        <h2 class="push-0 island-1-2">
+          <a href="{{site.baseurl}}/" class="milli gutter-1-2 pad-t-1-4 pad-b-1-4 logo ir"></a>
+        </h2>
+      </li>
+      <li class="list-group__item unit unit-xs-1 unit-s-1-4 unit-m-1-5 unit-pull-m-1-5"><a href="#work" class="localscroll micro bold gutter-1-2 pad-t-1-4 pad-b-1-4">work</a></li>
+      <li class="list-group__item unit unit-xs-1 unit-s-1-4 unit-m-1-5 unit-pull-m-1-5"><a href="{{site.baseurl}}/resume" class="micro bold gutter-1-2 pad-t-1-4 pad-b-1-4">resumé</a></li>
+      <li class="list-group__item unit unit-xs-1 unit-s-1-4 unit-m-1-5"><a href="{{site.baseurl}}/profile" class="micro bold gutter-1-2 pad-t-1-4 pad-b-1-4">profile</a></li>
+      <li class="list-group__item unit unit-xs-1 unit-s-1-4 unit-m-1-5"><a href="{{site.baseurl}}/contact" class="micro bold gutter-1-2 pad-t-1-4 pad-b-1-4">contact</a></li>
+    </ul>
+  </nav>
+
+{% else %}
+
+  <nav class="nav {{include.navClass}} text-center text-upper">
+    <ul class="list-group grid grid-middle navi">
+      <li class="list-group__item unit [ xs-1 s-1-4 m-1-5 ]"><a href="{{site.baseurl}}/" class="micro gutter-1-2 pad-t-1-4 pad-b-1-4">home</a></li>
+      <li class="list-group__item unit [ xs-1 s-1-4 m-1-5 ]"><a href="#work" class="micro gutter-1-2 pad-t-1-4 pad-b-1-4">work</a></li>
+      <li class="list-group__item unit [ xs-1 s-1-4 m-1-5 ]"><a href="{{site.baseurl}}/resume" class="micro gutter-1-2 pad-t-1-4 pad-b-1-4">resumé</a></li>
+      <li class="list-group__item unit [ xs-1 s-1-4 m-1-5 ]"><a href="{{site.baseurl}}/profile" class="micro gutter-1-2 pad-t-1-4 pad-b-1-4">profile</a></li>
+      <li class="list-group__item unit [ xs-1 s-1-4 m-1-5 ]"><a href="{{site.baseurl}}/contact" class="micro gutter-1-2 pad-t-1-4 pad-b-1-4">contact</a></li>
+    </ul>
+  </nav>
+{% endif %}

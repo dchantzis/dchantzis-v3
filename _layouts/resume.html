@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<main class="main-page push-2 {% if page.sectionClass %}{{page.sectionClass}}{% endif %}">
+
+  <section class="page-content island brand-color">
+
+    <h1 class="brand page-title">
+      <span class="background-white island-1-2">{{ page.title | capitalize }}</span>
+    </h1>
+    <div class="page-info p-container island-1-2">
+      {{ content }}
+    </div>
+
+  </section>
+
+</main>

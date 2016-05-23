@@ -1,0 +1,32 @@
+{% assign projects = site.projects | sort: 'order-grid-2' %}
+<div class="grid">
+{% for i in (1..2) %}
+
+    {% assign loop_index = forloop.index0 | times:14 %}
+
+    <div class="unit [ unit-xs-1-2 unit-s-1-2 unit-m-hidden ] push-0">
+      <div class="grid">
+      {% if i == 0 %}{% endif %}
+        {% for project in projects limit:14 offset:loop_index %}
+          <div class="unit [ unit-xs-1-1 unit-s-1-1 unit-m-hidden ] push-0">
+            <figure class="graphic">
+            <a class="project-link" href="{{ site.baseurl }}/work/{{project.projectSlug}}/">
+              <div class="embed embed-iso216">
+                <img class="embed-item img-flex" src='{{site.baseurl}}/files/{{project.projectSlug}}/thumbnail.jpg'>
+              </div>
+              <div class="media-body graphic-info">
+                <figcaption>
+                  <span class="brand">{{ project.category }}:</span>
+                  <h5 class="brand media-title">{{ project.label }}</h5>
+                  <span class="brand">- view -</span>
+                </figcaption>
+              </div>
+            </a>
+            </figure>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endfor %}
+</div>
+
