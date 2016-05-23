@@ -26,4 +26,4 @@
 - <https://github.com/dchantzis>
 
 ## Screenshots
-![Image 1](http://dchantzis-v3.nfshost.com/files/images/screenshots/screenshot-1.png)
+![Image 1](http://dchantzis-v3.nfshost.com/files/screenshots/screenshot-1.png)
